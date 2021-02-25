@@ -1,0 +1,451 @@
+<!-- 
+    Daniel Roa González            A01021960 
+    Sebastian Gonzalo Vives Faus | A01025211
+    Examen 1: CSS/HTML
+    2/25/2021
+-->
+
+<html>
+    <head>
+        <style>
+            html {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .bar{
+                padding-top: 1px;
+                padding-left: 100px;
+                padding-right: 100px;
+            }
+            .page {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgb(250, 250, 250);
+                height: 100%;
+            }
+            .navbar {
+                width: 100%;
+                background-color: green;
+                color: white;
+                height: 120px;
+            }
+            .navbar-content {
+                display: flex;
+                justify-content: flex-end;
+                margin-right: 50;
+                margin-top: 15;
+            }
+            .navbar p {
+                margin-left: 10;
+                margin-right: 10;
+            }
+
+            .title {
+                text-align: center;
+                justify-content: center;
+                background-image: url(./carousel-bg.jpg);
+                width: 95%;
+                background-position: 50%;
+                height: auto;
+            }
+            .title h1{
+                font-size: 50px;
+                color: white;
+            }
+            .title p{
+                color: white;
+                padding-top: 5px;
+                padding-left: 100px;
+                padding-right: 100px;
+                font-size: 20px;
+                text-align: center;
+            }
+
+
+            .color-grid {
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                margin-top: 20px;
+                margin-right: 400;
+                margin-left: 400;
+                margin-bottom: 10;
+            }
+            .item {
+                width: 130;
+                height: 110;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                margin: 0;
+            }
+
+            .item p{
+                margin: 0;
+            }
+            .about {
+                background-color: grey;
+            }
+            .about h1{
+                text-align: center;
+                font-size: 50px;
+            }
+            .about img{
+                align-items: flex-end;
+                width: 100%;
+                margin-right: 75px;
+            }
+            .about-content{
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+            .about span{
+                /* align-items: flex-end; */
+            }
+            .aboutText{
+                justify-content: center;
+                text-align: justify;
+                margin-left: 100px;
+                margin-right: 200px;
+            }
+            .abilities{
+                margin-left: 100px;
+            }
+            .bar0 {
+                border: 4px solid orange;
+                background-color: salmon;
+                margin-right: 1000px;
+            }
+            .bar1 {
+                border: 4px solid orange;
+                margin-right: 1000px;
+
+            }
+            .bar2 {
+                border: 4px solid orange;
+                margin-right: 1000px;
+            }
+            .bar3 {
+                border: 4px solid orange;
+                margin-right: 1000px;
+            }
+            .bar4 {
+                border: 4px solid orange;
+                margin-right: 1000px;
+            }
+            .whatwedo{
+                background-color: green;
+                width: 100%;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .whatwedo-content{
+                display: flex;
+                justify-content: center;
+                margin-left: 150px;
+                margin-right: 150px;
+            }
+
+            .whatwedo-item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+            }
+            .whatwedo-item p{
+                color: darkgray;
+            }
+            
+            .whatwedo-item2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                background-color: rgb(19, 82, 19);
+            }
+
+            .whatwedo-item2 img{
+                width: 100px;
+                background-color: rgb(255, 123, 0);
+                transform: rotate(45deg);
+            }
+            .whatwedo-item img{
+                width: 100px;
+                background: linear-gradient(90deg, rgb(82, 82,82) 50%, rgb(49, 49, 49) 50%)
+
+            }
+            .button{
+                border: 5px solid rgb(37, 37, 37);
+                background-color: rgb(37, 37, 37);
+            }
+            .pic1{
+                width: 100%;
+                height: 200px;
+                object-fit: cover;
+            }
+            .pic2{
+                width: 100%;
+                height: 40%;
+                object-fit: cover;
+            }
+            .team{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-align: center;
+                margin-top: 100px;
+                margin-bottom: 100px;
+            }
+            .teamcontent {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .teamitem {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                margin-left: 50px;
+                margin-right: 50px;
+            }
+            .teamitem p{
+                margin-top: 0;
+                color: grey;
+            }
+            .teamitem img{
+                width: 150px;
+            }
+
+            .bottom {
+                width: 100%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="page">
+            
+            <div class="navbar">
+                <div class="navbar-content">
+                    <p>About</p>
+                    <p>Service</p>
+                    <p>Team</p>
+                    <p>Price</p>
+                    <p>Clients</p>
+                    <p>Facts</p>
+                    <p>Contact</p>
+                </div>
+            </div>
+
+            <div class="title">
+                <h1>Beautiful Color Palettes For Your Next Web Project</h1>
+                <br>
+                <p>Choosing the right color scheme is essential to your website's success. Your layout and other design choices - including font - should be developed in concert with your color scheme to ensure readbility, cohesiveness and beauty in the final product.</p>
+            </div>
+
+            <div>
+                <h1>Pick Your Color Palette</h1>
+                <div class="bar" style="background-color: black;"></div>
+            </div>
+            <div class="color-grid">
+                <div class="item" style="background-color: rgb(119, 46, 22)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(5, 112, 116)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(92, 36, 15)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(50,168,82)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(252,132,231)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(184,54,249)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(190,3,144)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(191,106,67)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(184,163,89)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(188,64,61)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(227,78,158)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(229,221,76)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(65,139,0)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(148,185,244)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(85,93,94)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(63,163,196)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(238,6,251)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(27,41,129)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(104,122,102)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(207,192,215)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(184,167,227)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(116,60,136)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(143,218,142)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(227,181,174)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(250,140,95)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(124,228,7)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(40,159,102)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(200,148,241)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(43,90,160)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+                <div class="item" style="background-color: rgb(94,28,220)">
+                    <p>#F12ZS5234Z</p>
+                </div>
+            </div>
+
+            <div class="about">
+                <div>
+                    <h1>About Us</h1>
+                   
+                </div>
+                <div class="bar" style="background-color: white; margin-left: 600px; margin-right: 600px;"></div>
+                <div class="about-content">
+                    <p class="aboutText">
+                        Doggo ipsum puggo. Long doggo fluffer blop aqua doggo smol, mlem ruff corgo, length boy borkf super chub. You are doing me the shock length boy doing me a frighten lotsa pats, boof big ol. You are doing me the shock borkdrive ur givin me a spook very good spot mlem, many pats big ol pupper. Long water shoob puggo vvv big ol pupper dat tungg tho, much ruin diet long woofer long bois floofs snoot, borkdrive very hand that feed shibe long water shoob. Heckin long water shoob thicc most angery pupper I have ever seen pats, tungg doge. He made many woofs long water shoob wrinkler very jealous pupper snoot most angery pupper I have ever seen big ol, aqua doggo such treat boof most angery pupper I have ever seen borking doggo. You are doing me a frighten boofers borkf heckin good boys and girls, shoober.
+                    </p>
+                    <img src="agency-img3.jpg">
+                    <br/>
+                </div>
+                    <div class="abilities">
+                        <div class="bar0"></div>
+                        <p>HTML</p>
+                        <div class="bar1"></div>
+                        <p>CSS</p>
+                        <div class="bar2"></div>
+                        <p>JAVASCRIPT</p>
+                        <div class="bar3"></div>
+                        <p>PHP</p>
+                        <div class="bar4"></div>
+                        <p>PHOTOSHOP/ILUSTRATOR</p>
+                    </div>
+            </div>
+
+            <div class="whatwedo">
+                <h1>WHAT WE DO</h1>
+                <div class="bar" style="background-color: white;"></div>
+                <p>Asdasdue ncaksucaube ansdiashdhh enakud absda vvvva</p>
+                <div class="whatwedo-content">
+                    <div class="whatwedo-item">
+                        <img src="webdesign.png">
+                        <h3>Web Design</h3>
+                        <p>vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvva</p>
+                    </div>
+                    <div class="whatwedo-item">
+                        <img src="graphicdesign.png">
+                        <h3>Graphic Design</h3>
+                        <p>vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvva</p>
+                    </div>
+                    <div class="whatwedo-item2">
+                        <img src="mobile.png">
+                        <h3 style="color: rgb(255, 123, 0)">Mobile Design</h3>
+                        <div class="bar" style="background-color: white;"></div>
+                        <p>vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvva</p>
+                    </div>
+                </div>
+                <div class="button">
+                    HIRE US NOW!
+                </div>
+                
+                <div class="team">
+                    <h1>
+                        OUR AWESOME TEAM 
+                    </h1>
+                    <div class="bar" style="background-color: white;"></div>
+                    <p>Asdasdue ncaksucaube ansdiashdhh enakud absda vvvva</p>
+                    <div class="teamcontent">
+                        <div class="teamitem">
+                            <img src="1.jpg">
+                            <h3>Jane Doe</h3>
+                            <p style="color: black">CEO/Founder</p>
+                        <p>vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvva</p>
+                        </div>
+                        <div class="teamitem">
+                            <img src="1.jpg">
+                            <h3>Jane Doe</h3>
+                            <p style="color: black">CEO/Founder</p>
+                        <p>vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvva</p>
+                        </div>
+                        <div class="teamitem">
+                            <img src="1.jpg">
+                            <h3>Jane Doe</h3>
+                            <p style="color: black">CEO/Founder</p>
+                        <p>vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvva</p>
+                        </div>
+                        <div class="teamitem">
+                            <img src="1.jpg">
+                            <h3>Jane Doe</h3>
+                            <p style="color: black">CEO/Founder</p>
+                        <p>vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvvaAsdasdue ncaksucaube ansdiashdhh enakud absda vvvva</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            
+
+            <div class="bottom">
+                <img class="pic1" src="img-divider-img.jpg">
+                <img class="pic2" src="img-divider-img.jpg">
+            </div>
+
+        </div>
+    </body>
+
+</html>
