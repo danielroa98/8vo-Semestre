@@ -1,0 +1,89 @@
+.about h2{
+    text-align: center;
+}
+
+.about img{
+    border: 2px solid black;
+}
+
+.about p{
+    text-align: justify;
+    padding-left: 25px;
+}
+
+.about span{
+    align-items: center;
+    display: flex;
+}
+
+.contact {
+    text-align: center;
+    background-color: tomato;
+    width: 100%;
+}
+
+.contact h2 {
+    text-align: center;
+}
+
+.icons {
+    align-items: center;
+    text-align: center;
+    border-radius: 5%;
+    width: 20%;
+}
+
+.img {
+    background-image: url(https://i.picsum.photos/id/1016/3844/2563.jpg?hmac=WEryKFRvTdeae2aUrY-DHscSmZuyYI9jd_-p94stBvc);
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.img p{
+    text-transform: capitalize;
+    font-style: italic;
+}
+
+.img h2{
+    font-style: oblique;
+}
+
+.imgs {
+    border-radius: 50%;
+    padding: 10px;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    align-items: center;
+    background-color: gainsboro;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.header p {
+    /* margin-left: 10;
+    margin-right: 10; */
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.site {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text {
+    text-align: center;;
+}
+
+.thingsImg {
+    align-items: stretch;
+}

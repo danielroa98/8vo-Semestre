@@ -1,0 +1,76 @@
+/* Los componentes que se encuentran en este CSS están hechos especificamente para el HTML llamado index.html */
+
+/* En esta primera sección se encuentran las modificaciones que se le hicieron a los componentes de tipo a*/
+a {
+    font-style: italic;
+}a.carrera{
+    color: blue;
+}a.hobbies{
+    color: rgb(145, 8, 8);
+}a.funFact{
+    color: teal;
+}
+
+/* En esta sección se encuentran las modificaciones que se le hicieron a los divs */
+div {
+    border: 4px solid black;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+     text-align: center;
+    /*align-items: center;
+    align-self: center; */
+    height: auto;
+    width: 1000px;
+}div.carr{
+    border: 2px solid black;
+    background-color: yellow;
+    margin: 10px;
+    height: 75px;
+    width: 200px;
+}div.hobb{
+    border: 2px solid black;
+    background-color: chocolate;
+    margin: 10px;
+    height: 75px;
+    width: 425px;
+}div.funF{
+    border: 2px solid black;
+    background-color: aquamarine;
+    margin: 10px;
+    height: 75px;
+    width: 800px;
+}div.main {
+    background-color: darkcyan;
+}
+
+
+/* En esta sección se encuentran las modificaciones hechas al componente de tipo h2, solo contiene el nombre */
+h2 {
+    text-align: center;
+}
+
+/* En esta sección solo se encuentran el componente y las modificaciones de la imagen. */
+img {
+    align-items: center;
+    border: 2px solid black;
+    width:150px;
+    height: auto;
+}
+
+
+/* En esta sección solo se encuentran las adaptaciones que se le hicieron a los componentes de tipo span */
+span {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+}span.info{
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+/* En esta sección se encuentran los cambios que se le hicieron al único componente de tipo p */
+p.otroFF {
+    font-size: small;
+    font-style: italic;
+}
