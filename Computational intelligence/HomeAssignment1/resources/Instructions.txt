@@ -1,0 +1,18 @@
+Exercise 1 - Given the IDS dataset (Zeek), perform the task below (30% of grade):
+
+As the dataset has a big size, generate a random sample (10% of the original dataset) to analyze.
+Convert the ts field (timestamp) to the correct format (datetime64)
+Display the unique ports and originator IPs.
+Get the number of HTPP connections that exist in the dataset that does not run over port 80. 
+Answer (example):  answer_example.png    
+ 
+
+Exercise 2 - Using the same dataset, perform the following time-series analysis (30% of grade):
+
+Build a graph where the incidence of HTTP connection packets that did not use the standard port 80 or 8080 is grouped by quarter (save the generated jpeg/png). 
+Identify in the dataset the data that a connection spent more than 5 seconds. Group the information by months/year.
+Given that executable types ={'application/x-dosexec', 'application/octet-stream', 'binary', 'application/vnd.ms-cab-compressed'} and the common exploit types = {'application/x-java-applet','application/pdf','application/zip','application/jar','application/x-shockwave-flash'}. Find in the dataset the packages that has the presence of this kind of problems. Group this information by quarter and build a graph to present your answer. 
+
+Exercise 2 - Perform the following tutorial:   https://pandas.pydata.org/docs/getting_started/intro_tutorials/06_calculate_statistics.html (40% of grade):
+
+Realize some analysis in the Zeek dataset and generate a report with your finds (remember: a report has: introduction, methodology, finds, and conclusion).
