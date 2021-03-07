@@ -34,24 +34,42 @@ print('Sample information\n', convLog.info())
 #Used to check the sample's column heads.
 print('Sample heads\n', convLog.head())
 """
+# Excersice 1
+
 #Convert the timestamp to datetime and sort the sample
 convLog['ts'] = [
     datetime.fromtimestamp(float(date))
     for date in convLog['ts'].values
 ]
 
+# Ordering the data sample in order regarding the date of the ts value
 convLog = convLog.set_index('ts')
 convLog.index = pd.to_datetime(convLog.index)
 convLog = convLog.sort_index()
 
-print(convLog.info())
+#print(convLog.info())
 
 #Printing ports and IP origins
-print(convLog[['id.orig_h', 'id.resp_p']])
-
-print('\nService\n')
+convLog[['id.orig_h', 'id.resp_p']]
 
 http_service = convLog.service == 'http'
-port_used = convLog.id.resp_p != 80
+#port_used = convLog.id.resp_p <= 80
 
-""" convLog[http_service] """
+#convLog.groupby(by=['id.orig_h'])
+
+#Displaying the origin IP addresses and the ports
+print(convLog.groupby(['id.orig_h', 'id.resp_p']).size())
+
+#Adding format to the console output
+print('\n')
+
+#Printing the connection with that don't run over the port 80
+print(convLog.loc[(convLog['id.orig_p'] <= 80) & (convLog.service == 'http')])
+#print(convLog.loc[convLog['service'] == 'http'])
+
+
+# Excercise 2
+""" 
+convLog['duration'] = pd.to_numeric(convLog['duration'], errors = 'coerce').fillna((), downcast='infer')
+duration = convLog[(convLog['duration'] >= 5)]
+ """

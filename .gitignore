@@ -15,3 +15,6 @@
 ### Ignore large sample sets ###
 Computational intelligence/HomeAssignment1/resources/conn.log
 Computational intelligence/students/resources/http.log
+
+### Ignore mars-explorer-master ###
+Sistemas Inteligentes/mars-explorer-master/**
