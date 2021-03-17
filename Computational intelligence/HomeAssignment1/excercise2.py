@@ -26,13 +26,13 @@ httpLog = httpLog.sort_index()
 httpLogPorts = httpLog.where(
     (httpLog.id_resp_p != 80) & (httpLog.id_resp_p != 8080))
 
-print(httpLogPorts)
+#print(httpLogPorts)
 
-httpLog.request_body_len.resample('Q').mean().plot(kind='line')
-plt.show()
+#httpLog.request_body_len.resample('Q').mean().plot(kind='line')
+#plt.show()
 
-httpLogPorts.request_body_len.resample('Q').mean().plot(kind='line')
-plt.show()
+#httpLogPorts.request_body_len.resample('Q').mean().plot(kind='line')
+#plt.show()
 
 executable_types = set(['application/x-dosexec', 'application/octet-stream',
                         'binary', 'application/vnd.ms-cab-compressed'])
@@ -40,7 +40,14 @@ executable_types = set(['application/x-dosexec', 'application/octet-stream',
 common_exploits = set(['application/x-java-applet', 'application/pdf',
                        'application/zip', 'application/jar', 'application/x-shockwave-flash'])
 
-print(executable_types, '\n', common_exploits)
+#print(executable_types, '\n', common_exploits)
 
-# httpLog.info()
-# httpLog.head()
+httpTypes = httpLog.isin(executable_types)
+
+#httpTypes = httpLog.where((httpLog.resp_mime_types == executable_types) & (httpLog.user_agent == common_exploits))
+
+# httpTypes.request_body_len.resample('Q').mean().plot(kind='line')
+# plt.show()
+
+#httpLog.info()
+print(httpTypes.head())
