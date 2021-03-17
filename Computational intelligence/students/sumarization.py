@@ -48,12 +48,23 @@ print(values[http_df.columns.tolist()[2:7]])
 
 print(http_df.groupby(['resp_mime_types','user_agent']).size())
 
-print(http_df[http_df['user_agent'].isin(['Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)',
-                                          'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)'])].groupby(['resp_mime_types','user_agent']).size())
+print(http_df[http_df['user_agent'].isin(
+    ['Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1)',
+    'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; Trident/4.0)']
+    )].groupby(['resp_mime_types','user_agent']).size())
 
 
-executable_types = set(['application/x-dosexec', 'application/octet-stream', 'binary', 'application/vnd.ms-cab-compressed'])
+executable_types = set(
+    [
+        'application/x-dosexec', 
+        'application/octet-stream', 
+        'binary', 
+        'application/vnd.ms-cab-compressed'
+    ]
+)
+
 common_exploit_types = set(['application/x-java-applet','application/pdf','application/zip','application/jar','application/x-shockwave-flash'])
+
 print(http_df[http_df['resp_mime_types'].isin(executable_types)].groupby(['resp_mime_types','user_agent']).size())
 
 #print business days only + 10 days
