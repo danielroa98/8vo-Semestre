@@ -12,3 +12,12 @@ Respository with the codes and programs developed in classes during my 8th semes
 
 3- Sistemas Inteligentes
 * Carpeta con los códigos que se vayan a trabajar en clase o de tarea.
+
+## Important
+When running a project from __Computational Intelligence__, besides installing it with Anaconda, it's a good idea to also install that library using the following commands:
+
+### For Windows
+Make sure it's Python 3 and then run the following commands, make sure you are in the correct virtual environment. 
+
+    py --version
+    py -m pip install <NAME OF THE DEPENDENCY>
