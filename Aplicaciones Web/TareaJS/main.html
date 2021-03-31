@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script src="./main.js"></script>
+    <link rel="stylesheet" href="./main.css">
+    <meta charset="utf-8">
+
+    <title>Tarea 2: Formulario web avanzado</title>
+</head>
+
+<body>
+    <h2 class="display-2">Formulario web avanzado</h2>
+
+    <form>
+
+        <div class="firstSet">
+
+            <div class="elementForm">
+                <label for="Nombre">Nombre: </label>
+                <input type="text" name="Nombre" onblur="validarNombre(this)" placeholder="Escribe tu nombre">
+            </div>
+            
+            <div class="elementForm">
+                <label for="PrimerApellido">Primer apellido: </label>
+                <input type="text" name="PrimerApellido" onblur="validarPApellido(this)"
+                placeholder="Escribe tu primer apellido">
+            </div>
+            
+            <div class="elementForm">
+                <label for="SegundoApellido">Segundo apellido: </label>
+                <input type="text" name="SegundoApellido" onblur="validarSApellido(this)"
+                placeholder="Escribe tu segundo apellido">
+            </div>
+
+        </div><!-- End of first set of three -->
+
+        <div class="secondSet" hidden='hidden' id="secondSet">
+            
+            <div class="elementForm">
+                <label for="FechaNacimiento">Fecha de nacimiento: </label>
+                <input type="date" name="FechaNacimiento" onblur="checkBirthDate(this)"
+                placeholder="Escribe tu fecha de nacimiento">
+            </div>
+            
+            <div class="elementForm">
+                <label for="LugarNacimiento">Lugar de nacimiento: </label>
+                <input type="text" name="LugarNacimiento" onblur="lugarNacimiento(this)"
+                placeholder="Escribe tu lugar de nacimiento">
+            </div>
+            
+            <div class="elementForm">
+                <label for="CP">Codigo Postal: </label>
+                <input type="text" name="CP" onblur="autoFillInfo(this)" placeholder="Escribe tu código postal">
+            </div>
+    
+        </div> <!-- Fin second set -->
+
+        <div class="thirdSet" id='thirdSet' hidden='hidden'>
+            
+            <div class="elementForm">
+                <label for="Estado">Estado: </label>
+                <input type="text" name="Estado" id="Estado">
+            </div>
+            
+            <div class="elementForm">
+                <label for="Municipio">Municipio: </label>
+                <input type="text" name="Municipio" id="Municipio">
+            </div>
+            
+            <div class="elementForm">
+                <label for="Colonia">Colonia: </label>
+                <!-- <input type="text" name="Colonia" id="Colonia"> -->
+                <select id="selectColonia" onblur="validaColonia(this)"></select>
+            </div>
+            
+        </div> <!-- Fin third set -->
+
+        <div class="fourthSet" hidden='hidden' id='fourthSet'>
+            
+            <div class="elementForm">
+                <label for="CLABE">CLABE: </label>
+                <input type="text" name="CLABE" onblur="verificarClabe(this)" placeholder="Escribe tu CLABE">
+            </div>
+            
+            <div class="elementForm">
+                <label for="CP">Banco: </label>
+                <input type="text" name="CP" onblur="llenarDireccion(this)" placeholder="Escribe tu código postal">
+            </div>
+            
+            <div class="elementForm">
+                <label for="CURP">CURP: </label>
+                <input type="text" name="CURP" onblur="validarCurp(this)" placeholder="Escribe tu CURP">
+            </div>
+            
+        </div><!-- Fin fourth set -->
+
+        <div class="fifthSet" hidden='hidden' id="fifthSet">
+            
+            <div class="elementForm">
+                <label for="Telefono">No. de teléfono: </label>
+                <input type="text" name="Telefono" onblur="validarTel(this)" placeholder="Escriba un número para emergencias">
+            </div>
+        
+        </div><!-- Fin fifth set -->
+            
+        <input class='sendButton' type="button" value="Enviar" id='enviar' disabled='disabled'>
+
+    </form>
+
+</body>
+
+</html>

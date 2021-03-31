@@ -1,0 +1,16 @@
+.sendButton {
+    align-content: center;
+}
+
+.elementForm label{
+    display: inline-block;
+    width: 175px;
+}
+
+.elementForm input{
+    width: 250px;
+}
+
+.elementForm select {
+    width: 250px;
+}
