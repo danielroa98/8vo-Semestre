@@ -1,12 +1,11 @@
-import { clabe } from 'clabe-validator';
-
+/* This code was built by Daniel Roa */
 const regexAlphabet = /^[a-zA-Z_ ]+$/;
 
-let nombreValido = false, primerApellidoValido = false, segundoApellidoValido = false, cumpleaniosValido = false, lugarNacValido = false, cpValido = false;
+let nombreValido = false, primerApellidoValido = false, segundoApellidoValido = false, cumpleaniosValido = false, lugarNacValido = false, cpValido = false, clabeValido = false, curpValido = false;
 
-let firstSetValidate = false, secondSetValidate = false, thirdSetValidate = false, fourthSetValidate = false, fifthSetValidate = false, allDone = false;
+let firstSetValidate = false, secondSetValidate = false, thirdSetValidate = false, fourthSetValidate = false, allDone = false;
 
-let nombre = '', primerApellido = '', segundoApellido = '', birthDate = '', paisNacimiento = '', cp = '', data = '', colonia = [], selColonia;
+let nombre = '', primerApellido = '', segundoApellido = '', birthDate = '', paisNacimiento = '', cp = '', data = '', colonia = [], selColonia = '', clabeInput = '', bankName = '', curpIn = '', noTel= '';
 
 function unhideSets() {
 
@@ -29,7 +28,6 @@ function unhideSets() {
     }
 
     if (firstSetValidate == true && secondSetValidate == true && thirdSetValidate == true && fourthSetValidate == true) {
-        allDone = true;
         document.getElementById('fifthSet').removeAttribute('hidden');
     } else {
         //window.alert('ERROR');
@@ -166,8 +164,6 @@ function fillSelect() {
 
     var opts = document.getElementById('selectColonia');
 
-    console.log(typeof data);
-
     let res = '';
 
     for (i in colonia) {
@@ -183,8 +179,8 @@ function validaColonia(field) {
 
     console.log(selColonia.length);
 
-    if(!selColonia.match(regexAlphabet)) {
-        
+    if (!selColonia.match(regexAlphabet)) {
+
         field.style.background = 'red';
 
     } else if (selColonia.length > 0) {
@@ -197,29 +193,86 @@ function validaColonia(field) {
     }
 }
 
-async function verificarClabe(field) {
+function validateBank(field) {
+    let clabeDig = '';
 
-    let clabeVal = field.value;
+    clabeInput = field.value;
 
-    let checkedClabe = clabe.validate(clabeVal);
-
-    console.log(clabeCheck.ok ? '¡Que bueno!' : '¡Muy mal!');
-    console.log('Your bank: ' + clabeCheck.bank);
-
-    try {
-
-        const response = await fetch(
-            `https://bankcodesapi.com/mx-clabe/json/${token}/${clabe}/`
-        )
-
-        const data = await response.json();
-
-        if (data.error !== false) {
-            const { response } = data[0];
-            console.log(response);
+    if (clabeInput.length != 18) {
+        window.alert('El tamaño de la CLABE no es de 18 digitos!')
+        console.log(clabeInput.length)
+    } else {
+        
+        
+        clabeDig = clabeInput.substring(0, 3);
+        
+        bankName = bankID[clabeDig];
+        
+        console.log(bankName);
+        
+        if (bankName === undefined) {
+            window.alert('Verifique su CLABE una vez mas.')
+        } else {
+            document.getElementById('NombreBanco').value = bankName;
+            clabeValido = true;
         }
-
-    } catch (error) {
-        console.log(error);
+        
     }
+}
+
+function validarCurp(field) {
+
+    curpIn = field.value;
+
+    console.log(curpIn);
+
+    if (curpIn.length != 18) {
+        window.alert('Cheque su CURP otra vez!')
+    } else {
+        curpValido = true;
+
+        if (curpValido == true && clabeValido == true) {
+            fourthSetValidate = true;
+
+            unhideSets();
+        }
+    }
+}
+
+function verificarTel(field) {
+    noTel = field.value;
+
+    if (noTel.length !== 10) {
+        window.alert('Verifique el número ingresado')
+    } else {
+        allDone = true;
+
+        unhideSets();
+    }
+    
+}
+
+function printData() {
+    
+    let userLastNames = primerApellido + ' ' + segundoApellido;
+
+    let userValues = {
+        userName: nombre,
+        lastName: userLastNames,
+        dateOfBirth: birthDate,
+        placeOfBirth: paisNacimiento,
+        postalCode: cp,
+        colony: selColonia,
+        userClabe: clabeInput,
+        userBank: bankName,
+        userCurp: curpIn,
+        emergencyPhoneNo: noTel
+    }
+
+    const ouptputFile = JSON.stringify(userValues);
+
+    console.log('In file format\n', ouptputFile);
+    console.log('In regular JSON format\n', userValues);
+
+
 }

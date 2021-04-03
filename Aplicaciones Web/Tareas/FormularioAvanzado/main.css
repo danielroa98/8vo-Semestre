@@ -14,3 +14,17 @@
 .elementForm select {
     width: 250px;
 }
+
+html {
+    display: grid;
+    place-items: center;
+}
+
+form {
+    padding-left: 150px;
+}
+
+.sendButton{
+    margin-top: 50px;
+    margin-left: 150px;
+}
