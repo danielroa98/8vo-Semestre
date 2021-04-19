@@ -11,6 +11,8 @@
 *.code-workspace
 
 ### Node ###
+package-lock.json*
+
 # Logs
 logs
 *.log
