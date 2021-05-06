@@ -1,0 +1,43 @@
+.sendButton {
+    align-content: center;
+}
+
+.elementForm label {
+    display: inline-block;
+    width: 175px;
+}
+
+.elementForm input {
+    width: 250px;
+}
+
+.elementForm select {
+    width: 250px;
+}
+
+html {
+    display: grid;
+    place-items: center;
+}
+
+form {
+    padding-left: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.sendButton {
+    margin-top: 50px;
+    margin-left: 150px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.alignMiddle{
+    display: flex ;
+    justify-content: center;
+    flex-direction: column;
+}
